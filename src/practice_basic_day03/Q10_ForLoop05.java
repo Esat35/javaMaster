@@ -28,7 +28,7 @@ public class Q10_ForLoop05 {
             System.out.println("1 den "+rakam+" rakamına kadar olana sayıların karelerı toplamı : "+toplam);
         }else System.out.println("hatalı verı gırısı yaptınız !");
 
-//hh
+
     }
 
 }
