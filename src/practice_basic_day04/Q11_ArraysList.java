@@ -27,16 +27,19 @@ public class Q11_ArraysList {
         // 4. adim
 Random rndm=new Random();
         Scanner scan = new Scanner(System.in);
-        List<String> kullanıcılar = new ArrayList<String>(Arrays.asList("ali", "hasan", "muhsin", "dilara", "dilek", "ahmet", "mehmet", "ayse"));
+        List<String> kullanıcılar = new ArrayList<>(Arrays.asList("ali", "hasan", "muhsin", "dilara", "dilek", "ahmet", "mehmet", "ayse"));
         System.out.print("kullanıcı adınızı gırınız : ");
         String isim = scan.nextLine().trim();
 
-        if (kullanıcılar.contains(isim)){
-            System.out.println("kullanıcı adınız : "+isim+rndm.nextInt(100));
 
+        if (kullanıcılar.contains(isim)){
+            System.out.println("Bu kullanıcı adı zaten alınmıs");
+            System.out.println("yeni kullanıcı adı olarak bunu kullanabilirsiniz : "+isim+rndm.nextInt(100));
         }else{
-            System.out.println("kullanıcı adınız : "+isim);
+            System.out.println("Bu kullanıcı adını kullanabilisiniz");
+            System.out.println("yeni kullanıcı adı : "+isim);
         }
+
 
     }
 }

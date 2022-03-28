@@ -11,6 +11,12 @@ public class Q09_Arrays {
          */
 
         int arr[][]={{1,3,6},{2,8},{5,7,9,14}};
+        System.out.println("Arraydeki cift sayilarin toplami : "+ciftElemanTopla(arr));
+
+
+    }
+
+    private static int ciftElemanTopla(int[][] arr) {
         int toplam=0;
 
         for (int i=0; i<arr.length; i++) {
@@ -21,6 +27,6 @@ public class Q09_Arrays {
 
             }
         }
-        System.out.println("Arraydeki cift sayilarin toplami : "+toplam);
+        return toplam;
     }
 }
