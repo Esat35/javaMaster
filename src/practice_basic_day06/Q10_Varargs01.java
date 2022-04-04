@@ -1,36 +1,27 @@
 package practice_basic_day06;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
-
 public class Q10_Varargs01 {
-
-    // istedigimiz kadar sayi girdigiimizde
+    static int toplam;
+    // istedigimiz kadar sayi girdigimizde
     // toplamlari bize veren bir method yazalim...
     public static void main(String[] args) {
         // Not ; Var-args ---> Arguman cesitliligi
         // Var --->variety args--->arguments
+        Scanner scan = new Scanner(System.in);
+        int sayi =1;
+        while (sayi>0){
+            System.out.println("istediginiz kadar sayi girinz :" + "\nSayilarin toplami icin 0 a basiniz");
+            sayi = scan.nextInt();
+            sayiToplama(sayi);
+        }
 
-        int sayı1=10;
-        int sayı2=20;
-        int sayı4=30;
-        int sayı5=40;
-        int sayı3=50;
-        int sayı6=60;
-
-        sayılarıTopla(sayı1,sayı3,sayı6,sayı2,sayı4,sayı5);
-
+        System.out.println(toplam);
     }
-
-    private static void sayılarıTopla(int ...sayılar) {
-int toplam=0;
-        for (int each:sayılar
-             ) {
+    private static void sayiToplama(int...sayi){ //varargs 3 noktadan anliyoruz
+        for (int each:sayi
+        ) {
             toplam+=each;
         }
-        System.out.println("gırılen sayıların toplamı : "+toplam);
+
     }
-
-
 }
