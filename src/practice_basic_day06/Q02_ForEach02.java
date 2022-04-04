@@ -13,11 +13,11 @@ public class Q02_ForEach02 {
 
         for (String each :list
              ) {
-            System.out.println(each+" harf sayısı : "+each.length());
+            System.out.print(each+" : "+each.length()+"  ");
         }
 
 
-        System.out.println("******************************");
+        System.out.println();
         for (String w:list
              ) {
             if (w.startsWith("v")||w.startsWith("V")){
