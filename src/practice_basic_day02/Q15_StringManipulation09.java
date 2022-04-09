@@ -10,13 +10,16 @@ public class Q15_StringManipulation09 {
 		*/
     public static void main(String[] args) {
 
-        Scanner scan = new Scanner(System.in);
-        System.out.print("bir kelime giriniz : ");
-        String str = scan.nextLine();
+        Scanner scan= new Scanner(System.in);
+        System.out.println("Lutfen bir kelime giriniz :");
+        String kelime=scan.nextLine();
+        char ortancakarakter = kelime.charAt((kelime.length()-1)/2);
 
-        if (str.length() % 2 == 1 && str.length() >= 0) {
-            System.out.println(str.substring((str.length() - 1) / 2, (str.length() - 1) / 2 + 1));
+        if (kelime.length()%2==1 && kelime.length()>=3) {
+            System.out.println("kelimenin ortasindaki karakter :"+ ortancakarakter);
         }
+
+        scan.close();
 
 
     }

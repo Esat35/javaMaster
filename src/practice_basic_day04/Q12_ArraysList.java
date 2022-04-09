@@ -17,35 +17,30 @@ public class Q12_ArraysList {
          *
          */
 
-
         Scanner scan = new Scanner(System.in);
+        System.out.print("Olusturmak istediginiz listin uzunlugunu giriniz : ");
+        int listUzunluk = scan.nextInt();
 
-        System.out.print("olusturmak istedıgınız listenin boyutunu gırınız : ");
-        int listLength = scan.nextInt();
+        List<Integer> list = new ArrayList<>();
+        System.out.println("girdiginiz list uzunlugu kadar eleman ekleyiniz ..");
 
-
-        List<Integer> list = new ArrayList<Integer>();
-
-        for (int i = 0; i < listLength; i++) {
-            System.out.print((i + 1) + "." + " elemanı gırınız : ");
+        for (int i = 0; i < listUzunluk; i++){
             list.add(scan.nextInt());
         }
 
-        TekrarliEleman(list);
-
+        tekrarliEleman(list);
 
     }
 
-    private static void TekrarliEleman(List<Integer> list) {
-        List<Integer> tekrarliList = new ArrayList<Integer>();
-
-        for (int i = 0; i < list.size(); i++) {
-            for (int j = i+1; j < list.size(); j++) {
-                if (list.get(i) == list.get(j) && !tekrarliList.contains(list.get(i))) {
-                    tekrarliList.add(list.get(i));
+    private static void tekrarliEleman(List<Integer> ls) {
+        List<Integer>tekrarliList = new ArrayList<>();
+        for (int i = 0; i < ls.size(); i++){ //ilk listem
+            for (int j = i+1; j <ls.size(); j++){ //diger indexleri karislastiracak
+                if(ls.get(i) == ls.get(j) && !tekrarliList.contains(ls.get(i))){
+                    tekrarliList.add(ls.get(i));
                 }
             }
         }
-        System.out.println(" tekrarlı listenın elemanları : " + tekrarliList);
+        System.out.println("tekrarli listenin elemanlari :" + tekrarliList);
     }
 }

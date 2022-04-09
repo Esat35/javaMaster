@@ -1,8 +1,5 @@
 package practice_basic_day02;
 
-import java.util.Locale;
-import java.util.Scanner;
-
 public class Q13_StringManipulation07 {
     /*
      * girilen String icinde "xyz" dizimi var ise true degilse false return eden metod yaziniz
@@ -14,21 +11,16 @@ public class Q13_StringManipulation07 {
      * xyaz   ==   false
      */
     public static void main(String[] args) {
-
-
-        Scanner scan=new Scanner(System.in);
-        System.out.print("bir string giriniz : ");
-
-        String str= scan.nextLine().toLowerCase(Locale.ROOT);
-        boolean contains=false;
-
-        if(str.contains("xyz")){
-            contains=true;
-        }else {
-            contains=false;
-
+        String str = "abcdxyzm";
+        boolean xyzIceriyorMu=false;
+        if (str.contains("xyz")) {
+            xyzIceriyorMu=true;
+            System.out.println(xyzIceriyorMu);
+        } else {
+            xyzIceriyorMu=false;
+            System.out.println(xyzIceriyorMu);
         }
 
-        System.out.println(contains);
+        // bu sorunun cozumunu basit sekilde paylastim... method creation ile cozmenizi istiyorum, sonra paylasacagim..
     }
 }

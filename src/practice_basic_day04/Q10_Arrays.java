@@ -1,8 +1,5 @@
 package practice_basic_day04;
 
-import java.util.Arrays;
-import java.util.Scanner;
-
 public class Q10_Arrays {
     public static void main(String[] args) {
      /*
@@ -10,19 +7,27 @@ public class Q10_Arrays {
       *  Cumle: Verilen bir cumledeki bosluklar haric character sayisini bulunuz.
       */
 
-        Scanner scan=new Scanner(System.in);
-        System.out.print("bır cumle gırınız : ");
-        String str=scan.nextLine();
+        //1.yol
+        String str = "Verilen bir cumledeki bosluklar haric character sayisini bulunuz.";
 
-        String[]arr=str.split(" ");
+        str = str.replace(" ", ""); // str = "Verilenbircumledekibosluklarhariccharactersayisinibulunuz."
 
-        System.out.println(Arrays.toString(arr));
-        int karakterSayısı=0;
+        String harf[] = str.split("");
+        System.out.println(harf.length); //58
 
-        for (int i = 0; i <arr.length ; i++) {
-            karakterSayısı+=arr[i].length();
+        //2.yol
 
-        }
-        System.out.println("girdiğiniz cumledekı boşluk dısındakı karakter sayısı : "+karakterSayısı);
+        //Bosluk sayisi kelime sayisindan bir azdir
+        //Bosluk sayisi = Kelime sayisi - 1
+        String str1 = "Verilen bir cumledeki bosluklar haric character sayisini bulunuz.";
+
+        String kelime[] = str1.split(" ");
+        int boslukSayisi = kelime.length - 1;
+        System.out.println(boslukSayisi); //7
+
+        String character[] = str1.split("");
+        System.out.println(character.length - boslukSayisi); //58
     }
+
+
 }

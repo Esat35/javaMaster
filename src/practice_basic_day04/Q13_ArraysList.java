@@ -1,7 +1,6 @@
 package practice_basic_day04;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,26 +12,41 @@ public class Q13_ArraysList {
          * not kisa metodlar kullamayiniz
          * Input : {1,2,3,4,5,6,7,8} input n:2 Output : 7 and 8
          */
-int arr[]={1,2,3,4,5,6,7,8};
-        Scanner scan=new Scanner(System.in);
-        System.out.print("maximum olan kac sayı goruntıulemek ıstıyorsunuz : ");
-        int n=scan.nextInt();
 
-        if (n>arr.length){
-            System.out.println("arrayın boyutundan fazla eleman istiyorsunuz. o kadar eleman yok.");
-        }else{
-            Arrays.sort(arr);
-            for (int i = 0; i <arr.length ; i++) {
-              if (i>=arr.length-n){
-                  System.out.print(arr[i]+" ");
-              }
+        int arr[] = {2, 5, 3, 9, 8, 12, 6, 7, 4, 11};
+        int n = 4;
 
+        // bir list olusturun
 
+        List<Integer> list = new ArrayList<>();
+
+        // list elemanlarini ekleyiniz
+
+        for (int each : arr) {
+            list.add(each);
+        }
+
+        List<Integer> newList = new ArrayList<>();
+
+        int count = 1;
+
+        while (count <= n) {
+
+            int max = list.get(0); // max = listin ilk elemani
+
+            for (int i = 0; i < list.size(); i++) {
+                if (list.get(i) > max) {
+                    max = list.get(i);
+                }
             }
+
+            newList.add(max);
+            list.remove(list.indexOf(max)); // ayni buyuk sayi olmamasi icin bulunan en buyuk sayi ilk listten silinir
+            count++;
 
         }
 
+        System.out.println("Arrayin ilk " + n + " maksimum degerleri " + newList);
 
     }
-
 }

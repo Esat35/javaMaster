@@ -15,19 +15,21 @@ public class Q16_DoWhileLoop02 {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        System.out.print("bir kelime giriniz : ");
-
-        String kelime = "";
+        String word = "";
 
         do {
-            kelime = scan.next();
-            if (kelime.length() > 3 && kelime.length() % 2 != 0) {
-                System.out.println("kelımenın ortasındakı har : " + kelime.substring(kelime.length() / 2, kelime.length() / 2 + 1));
-
-            } else {
-                System.out.println("hatalı kelıme gırısı!");
+            System.out.print("bir string giriniz :");
+            word = scan.nextLine();
+            if(word.length()<3) {
+                System.out.println("string 3 karakterden az");
             }
-        } while (kelime.length() >= 3&&kelime.length() % 2 != 0);
+            if(word.length()%2==1 && word.length()>=3) {
+                System.out.println("string ortasindaki karakter :" +word.charAt(word.length()/2));
+            }
+            else {
+                System.out.println("You entered wrong word.(string deki karakter sayisi cift)");
+            }
+        }while(!(word.length()%2==1 && word.length()>=3) );
 
     }
 

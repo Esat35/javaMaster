@@ -1,7 +1,5 @@
 package practice_basic_day02;
 
-import java.util.Scanner;
-
 public class Q06_NestedIfandTernary {
     /*
     0 ~ 9 arasındaki sayilari cevirebilen bir java programi yazin
@@ -10,53 +8,48 @@ public class Q06_NestedIfandTernary {
    NestedIf ve Ternary kullanarak 2 yolla da cozunuz
  */
     public static void main(String[] args) {
+    //NestedIf ile
+        int num = 9; // bu satirdan farkli degerler verilebilir
+        String result = ""; //baslangicta benim sonuc um belli degil, o yuzden hicnirsey olarak atama yapabilirim..
+        if(num >=0 && num <= 9) {
 
-        Scanner scan = new Scanner(System.in);
-        System.out.print("bir rakam giriniz : ");
-        int rakam = scan.nextInt();
-
-        if (rakam >= 0 && rakam <= 9) {
-            if (rakam == 0) {
-                System.out.println("sıfır");
-            } else if (rakam == 1) {
-                System.out.println("bir");
-            } else if (rakam == 2) {
-                System.out.println("iki");
-            } else if (rakam == 3) {
-                System.out.println("uc");
-            } else if (rakam == 4) {
-                System.out.println("dort");
-            } else if (rakam == 5) {
-                System.out.println("bes");
-            } else if (rakam == 6) {
-                System.out.println("altı");
-            } else if (rakam == 7) {
-                System.out.println("yedi");
-            } else if (rakam == 8) {
-                System.out.println("sekiz");
-            } else System.out.println("dokuz");
-
-
-        } else {
-            System.out.println("hatali giriş");
+            if(num == 9)  //eger num 9 ise
+                result="nine";  //benim sonucum nine olsun , bu sekilde atama ile de yazilabilir.. yazdirma en asagida..
+            else if(num ==8)
+                result ="eight";
+            else if(num == 7)
+                result ="seven";
+            else if(num == 6)
+                result = "six";
+            else if(num == 5)
+                result = "five";
+            else if(num == 4)
+                result = "four";
+            else if(num == 3)
+                result = "three";
+            else if(num == 2 )
+                result = "two";
+            else if(num == 1)
+                result = "one";
+            else
+                result = "Zero";
+        } else { //0-9 arasindaki degerler disinda degerler girilirse
+            result = "Invalid"; //sonucum invalid olsun
         }
 
+        System.out.println("result = " + result);  // bu sekilde sonuc dinamik olarak yazdirilabilir
 
-        System.out.println("**********  ternary ile  ***********");
+    //Ternary ile
+        int n = 4;
 
-/*
-        (rakam >= 0 && rakam <= 9) ?(rakam==0? System.out.println("sıfır")
-                :(rakam==1? System.out.println("bir")
-                :(rakam==2? System.out.println("iki")
-                :rakam==3? System.out.println("üç")
-                :rakam==4? System.out.println("dört")
-                :rakam==5? System.out.println("beş")
-                :rakam==6? System.out.println("alti")
-                :rakam==7? System.out.println("yedi")
-                :rakam==8? System.out.println("sekiz")
-                :rakam==9?System.out.println("dokuz")
-                :System.out.println("hatalı gırıs");
+        String result2 = n==9? "nine" :n==8? "eight"
+                :n==7? "seven" :n==6? "six"
+                :n==5? "five"  :n==4? "four"
+                :n==3? "three" :n==2? "two"
+                :n==1? "one" :n==0? "zero" :"Invalid";
 
-*/
+        System.out.println(result2);
+
+
     }
 }

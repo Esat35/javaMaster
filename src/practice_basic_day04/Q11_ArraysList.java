@@ -1,6 +1,9 @@
 package practice_basic_day04;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.Scanner;
 
 public class Q11_ArraysList {
 
@@ -15,30 +18,46 @@ public class Q11_ArraysList {
 
          */
 
-        // 1. adim
 
+        List<String> veriTabanindakiKullanicilar = new ArrayList<>();
+        veriTabanindakiKullanicilar.add("Ayse");
+        veriTabanindakiKullanicilar.add("Ahmet");
+        veriTabanindakiKullanicilar.add("Hasan");
+        veriTabanindakiKullanicilar.add("Ali");
+        veriTabanindakiKullanicilar.add("Mehmet");
+        veriTabanindakiKullanicilar.add("Derya");
+
+        System.out.println("veriTabanindakiKullanicilar = " + veriTabanindakiKullanicilar);
+
+        // 1. adim
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Kullanmak istediginiz username giriniz :");
 
         // 2. adim
-
+        String username = scan.nextLine().trim();
 
         // 3. adim
-
+        boolean kullaniciIsmiVarMI = veriTabanindakiKullanicilar.contains(username);
 
         // 4. adim
-Random rndm=new Random();
-        Scanner scan = new Scanner(System.in);
-        List<String> kullanıcılar = new ArrayList<>(Arrays.asList("ali", "hasan", "muhsin", "dilara", "dilek", "ahmet", "mehmet", "ayse"));
-        System.out.print("kullanıcı adınızı gırınız : ");
-        String isim = scan.nextLine().trim();
 
-
-        if (kullanıcılar.contains(isim)){
-            System.out.println("Bu kullanıcı adı zaten alınmıs");
-            System.out.println("yeni kullanıcı adı olarak bunu kullanabilirsiniz : "+isim+rndm.nextInt(100));
-        }else{
-            System.out.println("Bu kullanıcı adını kullanabilisiniz");
-            System.out.println("yeni kullanıcı adı : "+isim);
+        if(kullaniciIsmiVarMI) {// kontrol mekanizmasi duplicationi onler
+            System.out.println("Bu kullanici adi zaten alinmis.");
+        }else {
+            System.out.println("Bu kullanici adini kullanabilirsiniz");
         }
+
+        //5.adim
+        if(kullaniciIsmiVarMI) {
+            //Random random =new Random();
+            int rastgeleSayi = new Random().nextInt(100); //1 ile girilen sayi arasinda uniqe(essiz) sayi uretir
+            username = username + ""+rastgeleSayi;
+            System.out.println("Yeni kullanici adi olarak bunu kullanabilirsiniz : " + username);
+        }else {
+            System.out.println("Yeni kullanici adi : " + username);
+        }
+
+        scan.close();
 
 
     }

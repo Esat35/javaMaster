@@ -15,19 +15,18 @@ public class Q14_StringManipulation08 {
 		*/
     public static void main(String[] args) {
 
-        Scanner scan=new Scanner(System.in);
-        System.out.println("num1 : ");
-String num1=scan.next();
-        System.out.println("num2 : ");
-        String num2=scan.next();
+        Scanner scan= new Scanner(System.in);
+        System.out.println("Lutfen 1. isim giriniz:"); String isim1=scan.nextLine().toLowerCase();
+        System.out.println("Lutfen 2. isim giriniz:"); String isim2=scan.nextLine().toLowerCase();
 
-
-        if (num1.length()%2==0){
-            num1=num1.substring(0,num1.length()/2)+num2+num1.substring(num1.length()/2);
-            System.out.println(num1);
-        }else {
-            System.out.println("name1 cift sayili olmadigi icin ortasina yerlestiremedik");
+        if (isim1.length()%2==0) {
+            System.out.println(isim1.substring(0, (isim1.length()/2)).concat(isim2).concat(isim1.substring(isim1.length()/2 )));
+        } else {
+            System.out.println("isim1 cift sayili olmadigi icin ortasina yerlestiremedik");
         }
+
+        scan.close();
+
 
 
     }

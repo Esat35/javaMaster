@@ -15,11 +15,8 @@ public class Q04_MethodCreation04 {
          *     Character.isDigit()
          *     Integer.valueOf()
          */
-
-
 		/*
-
-		Bilgilendirme:
+            Bilgilendirme:
 
 		    String  para1 ="1900";
 	        String  para2 = "2500";
@@ -33,41 +30,26 @@ public class Q04_MethodCreation04 {
 	        System.out.println(String.valueOf(num1)+String.valueOf(num2));
 
 	        */
+        public static void main(String[] args) {
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Lutfen bir string giriniz :");
+            String yazi = scan.nextLine();
 
-    public static void main(String[] args) {
+            sumOfDigit(yazi);
+        }
+            public static void sumOfDigit(String str) {
 
-        String  str ="ade1r4d3";
+                int sum = 0;
 
+                for(int i = 0 ; i < str.length() ; i++) {
+                    if(Character.isDigit(str.charAt(i))) {
+                        sum += Integer.valueOf(""+str.charAt(i));
+                    }
+                }
 
-       int toplam= digitTopla(str);
+                System.out.println("girilen stringdeki sayilarin toplami " + sum);
 
-        System.out.println(toplam);
-
-    }
-
-
-
-
-
-
-
-    private static int digitTopla(String str) {
-        int toplam=0;
-
-
-        for (int i = 0; i <str.length() ; i++) {
-            if (Character.isDigit(str.charAt(i))){
-
-               toplam+=Integer.valueOf(str.substring(i,i+1));
             }
+
         }
 
-
-
-
-
-        return toplam;
-    }
-
-
-}

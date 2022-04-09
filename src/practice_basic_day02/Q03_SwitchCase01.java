@@ -1,8 +1,5 @@
 package practice_basic_day02;
 
-import java.util.Locale;
-import java.util.Scanner;
-
 public class Q03_SwitchCase01 {
     /*
     gunleri gösterebilen bir program yazın
@@ -20,28 +17,27 @@ public class Q03_SwitchCase01 {
 */
     public static void main(String[] args) {
 
+        String day = "Friday";
 
-        Scanner scan = new Scanner(System.in);
-        System.out.print("gun ısmı gırınız : ");
-        String day = scan.next().toLowerCase(Locale.ROOT);
         switch (day) {
-            case "pazartesi":
-            case "sali":
-                System.out.println(" Java dersi gunleri");
+            case "Monday":
+            case "Tuesday":
+                System.out.println("Java class");
                 break;
-            case "persembe":
-            case "cuma":
-                System.out.println("Selenyum dersi gunleri");
+
+            case "Wednesday":
+            case "Saturday":
+                System.out.println("SQL");
                 break;
-            case "carsamba":
-            case "cumarresi":
-                System.out.println(" SQL dersi gunleri");
+
+            case "Friday":
+            case "Thursday":
+                System.out.println("Selenium");
                 break;
+
             default:
-                System.out.println("izin gunu");
+                System.out.println("Day off");
 
         }
-
-
     }
 }

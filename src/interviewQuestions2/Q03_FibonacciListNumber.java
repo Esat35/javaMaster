@@ -1,12 +1,16 @@
 package interviewQuestions2;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
 public class Q03_FibonacciListNumber {
+
     /*
      Kullanıcıdan alınan bir tamsayıya kadar FIBONACCI dizisi oluşturun.
      0-1-1-2-3-5-8-13-21-34....
      */
+
     public static void main(String[] args) {
         List<Integer> fibonacci = new ArrayList<>();
         Scanner scan = new Scanner(System.in);
@@ -14,6 +18,7 @@ public class Q03_FibonacciListNumber {
         int sayi = scan.nextInt();
         fibonacci.add(0);
         fibonacci.add(1);
+
         int i=1;
         if(sayi<=1){
             System.out.println("Daha buyuk tamsayi giriniz ... ");
@@ -28,6 +33,8 @@ public class Q03_FibonacciListNumber {
                         "\n Girilen sayiya kadar fibonacci dizisi : " + fibonacci);
             }else
                 System.out.println("Girdiginiz sayi fibonacci dizisinde bulunmaktadir..:" + fibonacci);
+
         }
     }
+
 }

@@ -11,18 +11,22 @@ public class Q11_StringManipulation05 {
      *
      */
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Lutfen cumle olusturmak icin bir kelime giriniz :");
+        String kelime1 = scan.next();
+        System.out.print("Lutfen cumle olusturmak icin bir kelime giriniz :");
+        String kelime2 = scan.next();
+        System.out.print("Lutfen cumle olusturmak icin bir kelime giriniz :");
+        String kelime3 = scan.next();
+        System.out.print("Lutfen cumle olusturmak icin bir kelime giriniz :");
+        String kelime4 = scan.next();
 
-        Scanner scan=new Scanner(System.in);
-        System.out.println(" 4 kelıme gırınız.\nher kelımeden sonra ENTER tusuna basınız.");
-String kelime1=scan.next();
-String kelime2=scan.next();
-String kelime3=scan.next();
-String kelime4=scan.next();
+        System.out.println(kelime1.substring(0,1).toUpperCase() +
+                            kelime1.substring(1) + " "+
+                            kelime2+" "+kelime3+" " +
+                            kelime4 +"."); //Cesaret insana sinirlarini ogretir.
 
-String cumle=kelime1.substring(0,1).toUpperCase()+kelime1.substring(1)+" "+kelime2.toLowerCase()+" "+kelime3.toLowerCase()+" "+kelime4.toLowerCase()+".";
-
-        System.out.println(cumle);
-
+        scan.close();
 
     }
 }

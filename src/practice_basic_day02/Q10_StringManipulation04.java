@@ -16,22 +16,13 @@ public class Q10_StringManipulation04 {
      */
 
     public static void main(String[] args) {
-        Scanner scan=new Scanner(System.in);
-        System.out.print(" bir kelime giriniz : ");
+        Scanner scan  = new Scanner(System.in);
+        System.out.println("bir string giriniz :");
+        String str = scan.next();
 
-        String kelime= scan.next();
-
-        if (kelime.length()>=3){
-            System.out.println(kelime.substring(kelime.length()-2)+kelime.substring(kelime.length()-2)+
-                    kelime.substring(kelime.length()-2));
-
-        }else {
-            System.out.println(kelime);
-        }
-
-
-
-
-
+        if(str.length()>=3){
+            System.out.print(str.substring(str.length()-2) + str.substring(str.length()-2) + str.substring(str.length()-2) );
+        }else
+            System.out.println(str);
     }
 }

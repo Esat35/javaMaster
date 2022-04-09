@@ -7,22 +7,19 @@ public class Q18_StringManipulation12 {
     // Kullanicidan alacaginiz bir stringin bos olup olmadigini kontrol ediniz.
 
     public static void main(String[] args) {
-
         Scanner scan = new Scanner(System.in);
-        System.out.print("bir String giriniz : ");
         String str = scan.nextLine();
-        if (str.length() == 0) {
-            System.out.println("girilen String boş");
+
+        int bosluk = str.indexOf(' ');
+
+        if (bosluk == -1 && !(str.isEmpty())) {
+            System.out.println("bosluk yoktur");
+
         } else {
-            System.out.println("girilen String bos degil.");
+            System.out.println("bosluk vardir");
 
         }
-
-            if (str.contains(" ")) {
-                System.out.println("cumle bosluk içeriyor.");
-            } else {
-                System.out.println("cumle boşluk içermiyor");
-            }
-        }
+        scan.close();
     }
 
+}

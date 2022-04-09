@@ -1,12 +1,19 @@
 package practice_basic_day02;
+
 import java.util.Scanner;
+
 public class Q05_SwitchCase03 {
+
     // Girilen uc haneli bir sayının okunusnu yazı ile yazdırınız.
+
     public static void main(String[] args) {
+
         Scanner scan = new Scanner(System.in);
         System.out.print("sayi giriniz :");
         int sayi = scan.nextInt();
+
         int onlarBasamagi= (sayi/10) %10, birlerBasamagi=(sayi%10), yuzlerBasamagi=sayi/100;
+
         if(sayi>99 && sayi<1000){
             switch(yuzlerBasamagi){
                 case 0: System.out.println(""); break;
@@ -43,8 +50,10 @@ public class Q05_SwitchCase03 {
                 case 7: System.out.println("yedi"); break;
                 case 8: System.out.println("sekiz"); break;
                 case 9: System.out.println("dokuz"); break;
-            }
-            scan.close();
-        }
+                }
+
+        scan.close();
+
     }
+ }
 }

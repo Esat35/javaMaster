@@ -9,26 +9,19 @@ public class Q12_MetCreationForLoop {
 		  reverseString */
 
     public static void main(String[] args) {
-
-
-        Scanner scan=new Scanner(System.in);
-        System.out.println("bir string gırınız :");
-        String str=scan.nextLine();
-
-
-        terseCevir(str);
-
+        Scanner scan = new Scanner(System.in);
+        System.out.println("bir string giriniz :");
+        String str = scan.nextLine();
+        System.out.println("string ifadenin tersi : " + reverseString(str));
 
     }
 
-    private static void terseCevir(String str) {
-String tersStr="";
-
-        for (int i = 0; i <str.length() ; i++) {
-            tersStr+=str.substring(str.length()-1-i,str.length()-i);
+    public static String reverseString (String str) {
+        String reversed = "";
+        for (int i= str.length()-1;i>=0;i--) {
+            reversed += str.charAt(i);
         }
-
-        System.out.println(tersStr);
+        return reversed;
 
     }
 

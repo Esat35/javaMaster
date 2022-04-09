@@ -1,5 +1,7 @@
 package practice_basic_day05.ObjeOlusturma_ogretmen;
+
 public class ObjectClass {
+
     /*
      * Object Class’i olusturun burada OgretmenBilgileri Class indan
      * object ureterek yeni
@@ -12,7 +14,9 @@ public class ObjectClass {
         obj1.yas=32;
         obj1.brans="Fizik";
         obj1.tel="123456789";
-        System.out.println("obj1 : " + obj1); //referans degeri yazdirir..obj1 : practice_basic_day05.ObjeOlusturma_ogretmen.OgretmenBilgileri@2ed94a8b
+
+        System.out.println("obj1 : " + obj1); //referans degeri yazdirir
+
         OgretmenBilgileri obj2= new OgretmenBilgileri();
         obj2.isim="Gulsen";
         obj2.soyisim="Genc";
@@ -20,8 +24,8 @@ public class ObjectClass {
         obj2.yas=35;
         obj2.tel="987654321";
 
-
         System.out.println(obj1.isim +" "+obj1.soyisim+", "+obj1.yas +", "+obj1.brans+", "+obj1.tel);
         System.out.println(obj2.isim +" "+obj2.soyisim+", "+obj2.yas +", "+obj2.brans+", "+obj2.tel);
     }
+
 }
