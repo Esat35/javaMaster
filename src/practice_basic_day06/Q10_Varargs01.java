@@ -10,6 +10,7 @@ public class Q10_Varargs01 {
         Scanner scan = new Scanner(System.in);
         int sayi =1;
         while (sayi>0){
+
             System.out.println("istediginiz kadar sayi girinz :" + "\nSayilarin toplami icin 0 a basiniz");
             sayi = scan.nextInt();
             sayiToplama(sayi);
