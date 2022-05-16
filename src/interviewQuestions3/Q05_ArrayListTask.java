@@ -19,7 +19,7 @@ public class Q05_ArrayListTask {
 
     public static void main(String[] args) {
         // Part1:
-        ArrayList <String> renkler = new ArrayList<>();
+        ArrayList<String> renkler = new ArrayList<>();
         renkler.add("Red");
         renkler.add("Green");
         renkler.add("Blue");
@@ -28,32 +28,24 @@ public class Q05_ArrayListTask {
 
         System.out.println(renkler); //[Red, Green, Blue, Yellow, Black]
 
-        for (int i = 0; i < renkler.size(); i++) { //her bir elemani ayri ayri yazmak icin for loop a ihtiyac duyduk
-            System.out.println(renkler.get(i)); //get() -> liste elemanlarini getirir
-
+        for (int i = 0; i <renkler.size() ; i++) {
+            System.out.println(renkler.get(i));
         }
 
-        // Part2:
-        ilkIndexeEkle(renkler,"White"); //ilk indexe eklemek istedigimiz rengi bu sekilde girdik
-        System.out.println(renkler);
 
-        // Part3:
-        // Create a method that accepts a String arraylist and a String as parameters
-        // it should add element before last element
-        // ex:  [1, 2, 3]  -> [1, 2, 4, 3]
+        basaElemanEkle(renkler,"hardal");
 
-        sonIndextenOnceEkle(renkler,"Pink");
-        System.out.println(renkler);
+        sonElemandanOnceyeEkle(renkler,"hardal");
 
-
-    }//main Sonu
-
-    private static void sonIndextenOnceEkle(ArrayList<String> renkler, String pink) {
-        renkler.add(renkler.size()-1,pink); //son elemani pink olarak atadik
     }
 
-    private static void ilkIndexeEkle(ArrayList<String> renkler, String white) { //parametre olarak rengi aldi..
-        renkler.add(0,white);
+    private static void sonElemandanOnceyeEkle(ArrayList<String> renkler, String yeniRenk) {
+        renkler.add(renkler.size()-1,yeniRenk);
+        System.out.println(renkler);
+    }
 
+    private static void basaElemanEkle(ArrayList<String> renkler, String yeniRenk) {
+        renkler.add(0,yeniRenk);
+        System.out.println(renkler);
     }
 }

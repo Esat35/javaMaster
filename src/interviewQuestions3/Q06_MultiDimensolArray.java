@@ -15,13 +15,15 @@ public class Q06_MultiDimensolArray {
         }
 
     private static int elemanSayisi(int[][] arr) {
-            int sayac = 0;
-        for (int i = 0; i < arr.length; i++) { //outer for loop
-            for (int j = 0; j < arr[i].length; j++) { //inner loop
-                    sayac++;
-            }
+            int elemeanSayısı=0;
+
+        for (int [] each:arr) {
+            elemeanSayısı +=each.length;
         }
-        return sayac;
+
+            return elemeanSayısı;
+
     }
+
 
 }

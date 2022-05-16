@@ -11,37 +11,34 @@ public class Q01_ReverseString {
     public static void main(String[] args) {
         //1.Yol: StringBuilder () kullanarak
 
-        String input = "All is well";
 
-        StringBuilder str = new StringBuilder();
-        str.append(input);//bu method String builder a ekleme yapar
+     String    str="hersey cok guzel olacak.";
+        StringBuilder sb = new StringBuilder(str);
+        System.out.println("sb = " + sb);
+        sb.reverse();
 
-        String reverseInput = str.reverse().toString();
-        System.out.println("1.yol :" + reverseInput); //1. yol :llew si llA
+        System.out.println("sb tersten : " + sb);
 
 
-        //2.Yol: String Classini kullanarak
-        System.out.print("2.yol :");//sonraki ifadeyi yanina yazdirabilmek icin
-
-        for (int i = input.length()-1; i >=0 ; i--) { //son karakterden basla, ilk karaktere kadar git..
-            System.out.print(input.charAt(i)); //her bir karakteri yazdir
+        //2. yol
+        System.out.print("2.yol ıle : ");
+        for (int i = 0; i <str.length(); i++) {
+            System.out.print(str.substring(str.length()-1-i,str.length()-i));
         }
 
-        System.out.println(); //alt satir birlesmesin diye eklenir
+//3. yol
+        System.out.println();
+        terstenYaz(str);
 
-        //3.Yol: Bir method olusturun, ardindan methodu main method dan cagirin
-        System.out.print("3.yol :");
-        inputTersArray(input);
+    }
 
-    }//main sonu
-    private static void inputTersArray(String input) {
-        char [] arr = input.toCharArray(); //String bir veriyi karakterlere char tipinde ayirir..
 
-        for (int i = input.length()-1; i >=0 ; i--) {
-            System.out.print(arr[i]);
+    public static void terstenYaz(String str){
+        System.out.print("3.yol ıle : ");
+        for (int i = str.length()-1; i >=0 ; i--) {
 
+            System.out.print(str.charAt(i));
         }
+    }
 
-    }//method sonu
-
-}//class sonu
+}

@@ -14,27 +14,24 @@ public class Q02_MergeCertainCharacters {
      */
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Bİr string giriniz :");
-        String str = scan.nextLine();
+       Scanner scan=new Scanner(System.in);
+        System.out.print(" bir kelime giriniz : ");
+        String kelime = scan.next();
+        System.out.print("tekrar sayısını gırınız : ");
+        int tekrarSayısı=scan.nextInt();
 
-        System.out.print("Bir sayi giriniz :");
-        int sayi = scan.nextInt();
-       // ilkSonHarf(str, sayi);
+        ilkVeSonHarfTekrarliYaz(kelime,tekrarSayısı);
 
-        System.out.println("girilen stringin ilk ve son harfinin istenen sayi kadar birlesik hali :" +ilkSonHarf(str,sayi));
 
-    } //main Sonu
 
-    private static String ilkSonHarf(String str, int sayi) {
-        String string = str.substring(0,1) + str.substring(str.length() - 1); //ea
+    }
 
-        String output = "";
-
-        for (int i = 1; i <=sayi; i++){ // ea dan kac tane yazacgim  eaeaea
-            output+=string ; // b= b+s
+    private static void ilkVeSonHarfTekrarliYaz(String kelime, int tekrarSayısı) {
+        String tekrarlı="";
+        for (int i = 0; i <tekrarSayısı ; i++) {
+          tekrarlı+= kelime.substring(0,1)+kelime.substring(kelime.length()-1);
         }
-        return output;
+        System.out.println(tekrarlı);
     }
 
 }

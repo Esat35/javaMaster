@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Q03_FibonacciListNumber {
+public class Q03_Fibonacci{
 
     /*
      Kullanıcıdan alınan bir tamsayıya kadar FIBONACCI dizisi oluşturun.

@@ -17,27 +17,26 @@ public class Q02_Palindrome {
           String ifade = scan.nextLine();
 
           palindomeWithStringBuilder(ifade);
-          palindromeWithForLoop(ifade);
+       palindromeWithForLoop(ifade);
 
       }
 
-    private static void palindromeWithForLoop(String str) {
-          String tersStr = "";
-        for (int i = str.length()-1; i >=0 ; i--) {
-            tersStr += str.charAt(i);
+    private static void palindromeWithForLoop(String ifade) {
+          String yeniIfade="";
+        for (int i = ifade.length()-1; i >=0 ; i--) {
+            yeniIfade+=ifade.charAt(i);
         }
-        System.out.println("tersStr = " + tersStr);
-        if(tersStr.equalsIgnoreCase(str)){
-            System.out.print("girilen ifade palindomdur -> " + tersStr);
-        }else System.out.print("girilen ifade palindrom degildir ->" +tersStr);
+
+        if (ifade.equalsIgnoreCase(yeniIfade))  {
+            System.out.println("bu bir palındrom");
+    }else System.out.println("bu bir palındrom degil!");
     }
 
-    private static void palindomeWithStringBuilder(String str) {
-          StringBuilder sb = new StringBuilder(str);
-          String tersStr = sb.reverse().toString();
-          if(tersStr.equalsIgnoreCase(str)){
-              System.out.println("girilen ifade palindomdur -> " + tersStr);
-          }else System.out.println("girilen ifade palindrom degildir ->" +tersStr);
+    private static void palindomeWithStringBuilder(String ifade) {
+          StringBuilder sb= new StringBuilder(ifade);
+          if (sb.reverse().toString().equalsIgnoreCase(ifade)){
+              System.out.println("bu bir palındrom");
+          }else System.out.println("bu bir palındrom degil!");
     }
 
 }

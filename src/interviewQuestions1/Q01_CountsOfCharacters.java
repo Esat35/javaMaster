@@ -1,44 +1,45 @@
 package interviewQuestions1;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 public class Q01_CountsOfCharacters {
-   /*
-     Kullanicidan bir String aliniz.
-     String'de var olan her character'in sayisini ekrana yazdiriniz.
-     Ornek: alacan ==> a = 3, l = 1, c = 1, n = 1
-            abaa   ==> a=3  b=1
-    */
-   public static void main(String[] args) {
-       Scanner scan = new Scanner(System.in);
-       System.out.print("Bir string giriniz :");
-       String str = scan.nextLine();
+    /*
+      Kullanicidan bir String aliniz.
+      String'de var olan her character'in sayisini ekrana yazdiriniz.
+      Ornek: alacan ==> a = 3, l = 1, c = 1, n = 1
+             abaa   ==> a=3  b=1
+     */
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("bır cumle gırınız : ");
+        String str = scan.nextLine();
 
-       //split()
-       String arr[] = str.split(""); //her bir karakteri ayirir
+        karakterSayısıBul(str);
 
-       System.out.println(Arrays.toString(arr));
 
-       //sort()
-       Arrays.sort(arr); //siralar
-       System.out.println(Arrays.toString(arr));
+    }
 
-       //sayac olustur
-       int counter =0;
+    private static void karakterSayısıBul(String str) {
+        String strArr[] = str.split("");
+        List<String> harfList = new ArrayList<>();
 
-       for(int i=1;i<arr.length;i++){
-           if(arr[i-1].equals(arr[i])){
-                    counter++;
-           }else{
-               System.out.println(arr[i-1] +" sayisi " +(counter+1));
-               counter = 0;
-           }
-           if(i==arr.length-1){ //en sona geldiginde
-               System.out.println(arr[i] + " sayisi " + (counter+1));
-           }
-       }
+        Arrays.sort(strArr);
+        System.out.println(Arrays.toString(strArr));
+        int count = 0;
 
-   }
+        for (int i = 0; i <strArr.length-1 ; i++) {
+            if (strArr[i].equals(strArr[i + 1])){
+                count++;
+            }else  {
+                System.out.println(strArr[i]+" harfinden "+(count+1)+ " adet var");
+                count = 0;
+            }
+            if (i==strArr.length - 2){
+                System.out.println(strArr[i]+" harfinden "+(count+1)+ " adet var");
+            }
+        }
+    }
 
 }
+
+

@@ -12,19 +12,20 @@ public class Q03_WhileCountSum {
 
         Scanner scan = new Scanner(System.in);
 
-        int sayi = 0;
+        int sayıAdedi = 0;
         int toplam = 0;
-        int sayac= 0;
-        while(sayac<10 && toplam<500){
-            System.out.println("Lutfen toplamak istediginiz sayilari giriniz :");
-            sayi= scan.nextInt();
-            toplam +=sayi;
-            sayac++;
+        while ((sayıAdedi <= 10 )) {
+            System.out.print("toplamak için bir sayı gırınız : ");
+            int sayi = scan.nextInt();
+            sayıAdedi++;
+
+                toplam += sayi;
+
+
+            if (toplam>500){
+                break;
+            }
         }
-
-        if(sayac<10 && toplam<500){
-            System.out.println(sayac + " adet sayi girdiniz. Toplami :" +toplam);
-        }else System.out.println("bu kadar sayi yeter "+ sayac +" adet sayi girdiniz. Toplami :" +toplam );
+        System.out.println(sayıAdedi + " sayı gırdın, toplamları : " + toplam);
     }
-
 }
